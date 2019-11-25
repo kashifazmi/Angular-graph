@@ -1,8 +1,8 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import * as Highcharts from 'highcharts';
 
-import * as jspdf from 'jspdf';
-import html2canvas from 'html2canvas';
+// import * as jspdf from 'jspdf';
+// import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,7 @@ export class AppComponent {
   Highcharts: typeof Highcharts = Highcharts; // required
   chartConstructor = 'chart'; // optional string, defaults to 'chart'
   // @ViewChild('contentToConvertIntoPdf') someInput: ElementRef;
-
+  @ViewChild('contentToConvertIntoPdf', { 'static': true}) content:ElementRef;
 
   chartOptions: Highcharts.Options = {
     chart: {
@@ -80,19 +80,19 @@ export class AppComponent {
 
 
   // Download PDF File
-  downloadAsPDF(): any {
-    setTimeout(() => {
-      const data = document.getElementById('contentToConvertIntoPdf');
-      html2canvas(data).then(canvas => {
-          // Few necessary setting options
-          const imgWidth = 180;
-          const pageHeight = 395;
-          const contentDataURL = canvas.toDataURL('image/png');
-          const pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF
-          const position = 0;
-          pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, (canvas.height * imgWidth / canvas.width));
-          pdf.save('GPTAProgress.pdf'); // Generated PDF
-      });
-  }, 500);
+  downloadAsPPT(): any {
+  //   setTimeout(() => {
+  //     const data = document.getElementById('contentToConvertIntoPdf');
+  //     html2canvas(data).then(canvas => {
+  //         // Few necessary setting options
+  //         const imgWidth = 180;
+  //         const pageHeight = 395;
+  //         const contentDataURL = canvas.toDataURL('image/png');
+  //         const pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF
+  //         const position = 0;
+  //         pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, (canvas.height * imgWidth / canvas.width));
+  //         pdf.save('GPTAProgress.pdf'); // Generated PDF
+  //     });
+  // }, 500);
 }
 }

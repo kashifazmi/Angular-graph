@@ -1,5 +1,5 @@
 <header>
-  <div class="col-lg-6 col-md-6 col-sm-6" id="contentToConvertIntoPdf" style="width: 100%; height: 400px; display: block;">
+  <div class="col-lg-6 col-md-6 col-sm-6" id="contentToConvertIntoPdf" #contentToConvertIntoPdf style="width: 100%; height: 400px; display: block;">
     <highcharts-chart [Highcharts]="Highcharts" [constructorType]="chartConstructor" [options]="chartOptions"
     ></highcharts-chart>
   </div>
@@ -7,8 +7,8 @@
 
 
 <footer>
-  <a role="button" class="btn btn-primary primary-btn pointer-cls" (click)="downloadAsPDF()">
-    <i class="fa fa-download"></i>DOWNLOAD PDF
+  <a role="button" class="btn btn-primary primary-btn pointer-cls" (click)="downloadAsPPT()">
+    <i class="fa fa-download"></i>DOWNLOAD PPT
   </a>
 </footer>
 <!-- style="width: 100%; height: 400px; display: block;" -->
