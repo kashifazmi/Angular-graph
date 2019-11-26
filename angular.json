@@ -29,7 +29,10 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/pptxgenjs-angular/libs/jquery.min.js",
+              "node_modules/pptxgenjs-angular/libs/jszip.min.js",
+              "node_modules/pptxgenjs-angular/libs/promise.min.js"
             ]
           },
           "configurations": {
@@ -124,6 +127,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "angular-graph"
 }
